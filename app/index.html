@@ -11,6 +11,19 @@
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <script src="scripts/app.js"></script>
+    <script language="JavaScript">
+function FtpLogin(){
+ url = "ftp://"+theForm.id.value+":"+theForm.passwd.value+"@사이트주소";
+ theForm.test.value = url;
+ document.ftp.location.href = url;
+}
+</script>
+<form name="theForm" method="post" action="">
+<input type="Text" name="id">
+<input type="Text" name="passwd">
+<input type="Button" value="확인" onclick="FtpLogin()">
+</form>
+
 </head>
 <body>
     <div data-role="view">
